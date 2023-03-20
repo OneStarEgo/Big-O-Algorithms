@@ -23,3 +23,15 @@ def all_less_than_100(numbers):
 
 print(all_less_than_100([1, 2, 3, 99])) #should print True
 print(all_less_than_100([1, 2, 3, 100])) #should print False
+
+# Time complexity: O(1)
+def has_repeated_names(names):
+    name_counts = {}
+    for name in names:
+        if name in name_counts:
+            return True
+        name_counts[name] = 1
+    return False
+
+print(has_repeated_names(["Joe", "Paul", "Gregor", "Ronald"])) #should print False
+print(has_repeated_names(["Joe", "Ronald", "Gregor", "Joe"])) #should print True
